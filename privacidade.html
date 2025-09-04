@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-BR" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Privacidade • Pomodoro Brasil</title>
+  <link rel="preload" href="style.css" as="style" onload="this.rel='stylesheet'">
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div class="brand">
+        <div class="logo" aria-hidden="true"></div>
+        <div>
+          <div>VINTAGE CLUB • POMODORO</div>
+          <small>Foco simples e elegante</small>
+        </div>
+      </div>
+      <div class="controls">
+        <button class="btn theme-toggle" id="themeToggle" aria-label="Alternar tema">🌙/☀️</button>
+      </div>
+    </header>
+
+    <main class="main">
+      <section class="grid">
+        <div class="card" style="grid-column: 1 / -1;">
+          <h3>Política de Privacidade</h3>
+          <div class="muted" style="line-height:1.7">
+            <p>Respeitamos sua privacidade. Este site não coleta dados pessoais.</p>
+            <p>Suas configurações (tema, tempos do Pomodoro, tarefas, estado do timer) são armazenadas apenas no seu navegador usando <em>localStorage</em>.</p>
+            <p>Não utilizamos cookies de rastreamento nem serviços de análise.</p>
+            <p>Ao limpar os dados do navegador, suas informações locais podem ser apagadas.</p>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <footer>
+    <nav>
+      <a href="index.html">Início</a> |
+      <a href="termos.html">Termos</a> |
+      <a href="privacidade.html">Privacidade</a>
+    </nav>
+    <small>© PomodoroBrasil 2025. Todos os direitos reservados.</small>
+  </footer>
+
+  <script defer src="script.js"></script>
+</body>
+</html>

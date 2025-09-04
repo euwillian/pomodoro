@@ -12,14 +12,14 @@
 <meta name="twitter:description" content="Use o Pomodoro Brasil para estudar e trabalhar com foco. Timer Pomodoro online gratuito." />
 <meta name="twitter:image" content="https://pomodorobrasil.com/og-image.png" />
 
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Timer Pomodoro Online • Técnica Pomodoro Brasil • Produtividade</title>
-  <meta name="description" content="Use o Timer Pomodoro Online gratuito para estudar ou trabalhar com foco. Técnica Pomodoro Brasil com lista de tarefas, temas claro/escuro e ciclos automáticos." />
-  <meta name="robots" content="index, follow">
-  <meta name="keywords" content="técnica pomodoro, timer pomodoro online, produtividade, estudo focado, gerenciamento de tempo">
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Timer Pomodoro Online • Técnica Pomodoro Brasil • Produtividade</title>
+<meta name="description" content="Use o Timer Pomodoro Online gratuito para estudar ou trabalhar com foco. Técnica Pomodoro Brasil com lista de tarefas, temas claro/escuro e ciclos automáticos." />
+<meta name="robots" content="index, follow">
+<meta name="keywords" content="técnica pomodoro, timer pomodoro online, produtividade, estudo focado, gerenciamento de tempo">
 
-  <script type="application/ld+json">
+<script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "WebSite",
@@ -34,10 +34,11 @@
   }
 }
 </script>
-    <link rel="preload" href="style.css" as="style" onload="this.rel='stylesheet'">
+<link rel="preload" href="style.css" as="style" onload="this.rel='stylesheet'">
 </head>
 <body>
-    <h1 style="position:absolute; left:-9999px;">Timer Pomodoro Online grátis — Técnica Pomodoro Brasil</h1>
+  <h1 style="position:absolute; left:-9999px;">Timer Pomodoro Online grátis — Técnica Pomodoro Brasil</h1>
+
   <div class="wrap">
     <header>
       <div class="brand">
@@ -48,65 +49,100 @@
         </div>
       </div>
       <div class="controls">
+        <button class="btn" id="settingsBtn">Ajustes</button>
         <button class="btn theme-toggle" id="themeToggle" aria-label="Alternar tema">🌙/☀️</button>
       </div>
     </header>
 
-    <section class="hero">
-      <div class="tagline">Técnica Pomodoro</div>
-      <div class="timer-card" role="group" aria-label="Timer Pomodoro">
-        <div class="timer-status" id="status">Foco</div>
-        <div class="timer-display" id="display">25:00</div>
-        <div class="timer-actions">
-            <button class="btn primary" id="startBtn" aria-label="Iniciar o timer Pomodoro">Iniciar</button>
-            <button class="btn soft" id="pauseBtn" aria-label="Pausar o timer Pomodoro">Pausar</button>
-            <button class="btn soft" id="resetBtn" aria-label="Resetar o timer Pomodoro">Resetar</button>
+    <main class="main">
+      <section class="hero">
+        <div class="tagline">Técnica Pomodoro</div>
+        <div class="timer-card" role="group" aria-label="Timer Pomodoro">
+          <div class="timer-status" id="status">Foco</div>
+          <div class="timer-display" id="display">25:00</div>
+          <div class="timer-actions">
+              <button class="btn primary" id="startBtn" aria-label="Iniciar o timer Pomodoro">Iniciar</button>
+              <button class="btn soft" id="pauseBtn" aria-label="Pausar o timer Pomodoro">Pausar</button>
+              <button class="btn soft" id="resetBtn" aria-label="Resetar o timer Pomodoro">Resetar</button>
+          </div>
+          <div class="kpi">
+            <span><span class="dot" aria-hidden="true"></span> Pomodoros: <strong id="pomos">0</strong></span>
+            <span>•</span>
+            <span>Ciclo atual: <strong id="cycle">1</strong>/4</span>
+          </div>
         </div>
-        <div class="kpi">
-          <span><span class="dot" aria-hidden="true"></span> Pomodoros: <strong id="pomos">0</strong></span>
-          <span>•</span>
-          <span>Ciclo atual: <strong id="cycle">1</strong>/4</span>
-        </div>
-      </div>
+      </section>
 
-      <details class="settings" id="settings">
-        <summary><strong>Opções</strong> — ajuste os tempos (minutos)</summary>
-        <div class="rows">
-          <div class="field"><label for="workM">Foco</label><input id="workM" type="number" min="1" max="90" value="25"></div>
-          <div class="field"><label for="shortM">Pausa curta</label><input id="shortM" type="number" min="1" max="30" value="5"></div>
-          <div class="field"><label for="longM">Pausa longa</label><input id="longM" type="number" min="5" max="60" value="15"></div>
+      <section class="grid" style="margin-top:22px;">
+        <div class="card">
+          <h3>Lista de tarefas</h3>
+          <div class="task-input">
+            <input id="newTask" type="text" placeholder="Adicionar nova tarefa…" aria-label="Nova tarefa">
+            <button class="btn" id="addTask">Adicionar</button>
+          </div>
+          <div class="tasks scroll-area" id="tasks" aria-live="polite"></div>
         </div>
-        <div style="margin-top:12px; display:flex; gap:10px; flex-wrap:wrap;">
-          <button class="btn" id="saveSettings">Salvar opções</button>
-          <button class="btn" id="defaultSettings">Padrão</button>
-          <span class="muted">As opções ficam salvas no seu navegador.</span>
-        </div>
-      </details>
-    </section>
 
-    <section class="grid" style="margin-top:22px;">
-      <div class="card">
-        <h3>Lista de tarefas</h3>
-        <div class="task-input">
-          <input id="newTask" type="text" placeholder="Adicionar nova tarefa…" aria-label="Nova tarefa">
-          <button class="btn" id="addTask">Adicionar</button>
+        <div class="card">
+          <h3>Dicas rápidas</h3>
+          <ul class="muted" style="margin:0 0 4px 18px; line-height:1.6;">
+            <li>Trabalhe 25 min. Faça pausa curta. A cada 4, faça pausa longa.</li>
+            <li>Edite uma tarefa clicando no lápis ✏️. Marque como concluída na caixa ☑️.</li>
+            <li>Use o botão 🌙/☀️ no topo para alternar o tema.</li>
+          </ul>
         </div>
-        <div class="tasks" id="tasks" aria-live="polite"></div>
-      </div>
 
-      <div class="card">
-        <h3>Dicas rápidas</h3>
-        <ul class="muted" style="margin:0 0 4px 18px; line-height:1.6;">
-          <li>Trabalhe 25 min. Faça pausa curta. A cada 4, faça pausa longa.</li>
-          <li>Edite uma tarefa clicando no lápis ✏️. Marque como concluída na caixa ☑️.</li>
-          <li>Use o botão 🌙/☀️ no topo para alternar o tema.</li>
-        </ul>
+        <div class="card">
+          <h3>Vídeo curto (YouTube)</h3>
+          <div class="yt-input">
+            <input id="ytUrl" type="url" placeholder="Cole a URL do vídeo do YouTube" aria-label="URL do vídeo do YouTube">
+            <button class="btn" id="ytLoad">Carregar</button>
+          </div>
+          <div class="yt-player-wrap">
+            <div id="ytPlayer" class="yt-player" aria-label="Player de vídeo"></div>
+          </div>
+          <div class="yt-controls">
+            <button class="btn" id="ytPlay">▶️ Reproduzir</button>
+            <button class="btn" id="ytPause">⏸️ Pausar</button>
+            <label class="muted" for="ytVol">Volume</label>
+            <input id="ytVol" type="range" min="0" max="100" value="60" />
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <footer>
+    <nav>
+      <a href="index.html">Início</a> |
+      <a href="termos.html">Termos</a> |
+      <a href="privacidade.html">Privacidade</a>
+    </nav>
+    <small>© PomodoroBrasil 2025. Todos os direitos reservados.</small>
+  </footer>
+
+  <div id="overlay" style="display:none;"></div>
+  <div id="settingsModal" class="modal" style="display:none;">
+    <div class="modal-content">
+      <h2>Ajustes</h2>
+      <div class="rows">
+        <div class="field"><label for="workM">Foco</label><input id="workM" type="number" min="1" max="90" value="25"></div>
+        <div class="field"><label for="shortM">Pausa curta</label><input id="shortM" type="number" min="1" max="30" value="5"></div>
+        <div class="field"><label for="longM">Pausa longa</label><input id="longM" type="number" min="5" max="60" value="15"></div>
       </div>
-    </section>
+      <div class="auto-options">
+        <label><input type="checkbox" id="autoStartWork" checked> Iniciar foco automaticamente</label>
+        <label><input type="checkbox" id="autoStartBreak" checked> Iniciar pausas automaticamente</label>
+      </div>
+      <div class="modal-actions">
+        <button class="btn" id="saveSettings">Salvar</button>
+        <button class="btn" id="defaultSettings">Padrão</button>
+        <button class="btn" id="closeSettings">Fechar</button>
+      </div>
+      <span class="muted">As opções ficam salvas no seu navegador.</span>
+    </div>
   </div>
 
   <script defer src="script.js"></script>
-
 </body>
-
 </html>
