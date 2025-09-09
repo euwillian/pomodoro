@@ -11,33 +11,14 @@
     <title>Termos de Uso • Pomodoro Brasil</title>
     <link
       rel="preload"
-      href="style.css"
+      href="/assets/css/style.css"
       as="style"
       onload="this.rel='stylesheet'"
     />
   </head>
   <body>
     <div class="wrap">
-      <header>
-        <div class="brand">
-          <a href="/">
-            <div class="logo" aria-hidden="true"></div>
-          </a>
-          <div>
-            <div>VINTAGE CLUB • POMODORO</div>
-            <small>Foco simples e elegante</small>
-          </div>
-        </div>
-        <div class="controls">
-          <button
-            class="btn theme-toggle"
-            id="themeToggle"
-            aria-label="Alternar tema"
-          >
-            🌙/☀️
-          </button>
-        </div>
-      </header>
+      <div id="header-placeholder"></div>
 
       <main class="main">
         <section class="grid">
@@ -68,14 +49,10 @@
       </main>
     </div>
 
-    <footer>
-      <nav>
-        <a href="index.html">Início</a> | <a href="termos.html">Termos</a> |
-        <a href="privacidade.html">Privacidade</a>
-      </nav>
-      <small>© PomodoroBrasil 2025. Todos os direitos reservados.</small>
-    </footer>
+    <!-- carregar o footer -->
+    <div id="footer-placeholder"></div>
+    <script src="/assets/js/script.js"></script>
 
-    <script defer src="script.js"></script>
+    <script defer src="/assets/js/script.js"></script>
   </body>
 </html>

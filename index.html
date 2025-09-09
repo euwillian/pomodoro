@@ -51,8 +51,8 @@
     />
 
     <!-- Favicon -->
-    <link rel="icon" href="img/favicon.ico" type="image/x-icon" />
-    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
+    <link rel="icon" href="/assets/img/favicon.ico" type="image/x-icon" />
+    <link rel="shortcut icon" href="/assets/img/favicon.ico" type="image/x-icon" />
 
     <script type="application/ld+json">
       {
@@ -71,7 +71,7 @@
     </script>
     <link
       rel="preload"
-      href="style.css"
+      href="/assets/css/style.css"
       as="style"
       onload="this.rel='stylesheet'"
     />
@@ -82,27 +82,8 @@
     </h1>
 
     <div class="wrap">
-      <header>
-        <div class="brand">
-          <a href="/">
-            <div class="logo" aria-hidden="true"></div>
-          </a>
-          <div>
-            <div>VINTAGE CLUB • POMODORO</div>
-            <small>Foco simples e elegante</small>
-          </div>
-        </div>
-        <div class="controls">
-          <button class="btn" id="settingsBtn">Ajustes</button>
-          <button
-            class="btn theme-toggle"
-            id="themeToggle"
-            aria-label="Alternar tema"
-          >
-            🌙/☀️
-          </button>
-        </div>
-      </header>
+      <!-- Header -->
+      <div id="header-placeholder"></div>
 
       <main class="main">
         <section class="hero">
@@ -202,13 +183,8 @@
       </main>
     </div>
 
-    <footer>
-      <nav>
-        <a href="index.html">Início</a> | <a href="termos.html">Termos</a> |
-        <a href="privacidade.html">Privacidade</a>
-      </nav>
-      <small>© PomodoroBrasil 2025. Todos os direitos reservados.</small>
-    </footer>
+    <!-- Footer -->
+    <div id="footer-placeholder"></div>
 
     <div id="overlay" style="display: none"></div>
     <div id="settingsModal" class="modal" style="display: none">
@@ -247,6 +223,6 @@
       </div>
     </div>
 
-    <script defer src="script.js"></script>
+    <script defer src="/assets/js/script.js"></script>
   </body>
 </html>
