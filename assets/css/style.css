@@ -131,6 +131,7 @@ button {
 .main {
   display: block;
   padding: 0 0 8px;
+  margin-top: 20px;
 }
 
 .hero {
